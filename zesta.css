@@ -3,16 +3,49 @@
 }
 
 #big-container {
-    font-size: 2em;
+    /*font-size: 25px;*/
     font-family: "Segoe UI";
     border: green solid 2px;
     width: 500px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+/*-----------face-----------*/
 #face {
-    background: blue;
+    background: green;
 }
+
+#nom, #prenom, #job {
+    font-weight: bold;
+}
+
+#job {
+    /*color: darkgray;*/
+    font-weight: bold;
+}
+
+/*-----------Back-----------*/
 
 #back {
-    background: red;
+    /*background: red;*/
 }
+#back *{
+    margin:auto;
+}
+.cell-lbl {
+    font-weight: bold;
+}
+
+/*-----------Back & Face-----------*/
+#face, #back {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+

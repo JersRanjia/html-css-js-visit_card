@@ -1,3 +1,15 @@
 * {
     margin:0;
 }
+
+#big-container {
+    border: green solid 2px;
+}
+
+#face {
+    background: blue;
+}
+
+#back {
+    background: red;
+}

@@ -3,7 +3,10 @@
 }
 
 #big-container {
+    font-size: 2em;
+    font-family: "Segoe UI";
     border: green solid 2px;
+    width: 500px;
 }
 
 #face {

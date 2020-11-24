@@ -18,7 +18,9 @@
 #face {
     background: green;
 }
-
+#face *{
+    margin:auto;
+}
 #nom, #prenom, #job {
     font-weight: bold;
 }

@@ -5,18 +5,26 @@
 #big-container {
     /*font-size: 25px;*/
     font-family: "Segoe UI";
-    border: green solid 2px;
     width: 500px;
     margin: auto;
+    margin-top: 5px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+#tourner {
+    position: absolute;
+    top: 150px;
+    z-index: 10;
+}
+
 /*-----------face-----------*/
 #face {
     background: green;
+    border: green solid 5px;
+    z-index: 3;
 }
 #face *{
     margin:auto;
@@ -30,10 +38,27 @@
     font-weight: bold;
 }
 
+#ispm {
+    color: white;
+    margin-top: 0px;
+}
+
+#slogan {
+    color: white;
+    font-weight: bold;
+}
+
+#logo {
+    margin-bottom: 0px;
+}
+
 /*-----------Back-----------*/
 
 #back {
-    /*background: red;*/
+    background: white;
+    border: #005900 solid 5px;
+    z-index: 2;
+    /*transform: rotateY(90deg);*/
 }
 #back *{
     margin:auto;
@@ -44,10 +69,45 @@
 
 /*-----------Back & Face-----------*/
 #face, #back {
+    position: absolute;
+    top:0px ;
+    width: 500px;
+
     min-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
+    transform-origin: 0 0 0;
+
 }
 
+/*-----------animation-----------*/
+
+@keyframes disparitionFace {
+
+    from {
+        transform: rotate3d(0, 1, 0, 0deg);
+        z-index: 3;
+    }
+    to {
+        transform: rotate3d(0, 1, 0, 90deg);
+    }
+}
+
+.disparait {
+    animation-name: disparitionFace;
+    animation-duration: 1s ;
+}
+
+@keyframes apparitionFace {
+    from {transform: rotate3d(0, 1, 0, 90deg);}
+    to {
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+}
+
+.apparait {
+    animation-name: apparitionFace;
+    animation-duration: 1s ;
+}

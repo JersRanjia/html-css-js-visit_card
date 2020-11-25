@@ -14,6 +14,7 @@ function tourner() {
         face.style.zIndex = 3 ;
         face.onanimationend = function (e) {
             face.style.zIndex = 3 ;
+            bt_tourner.innerText = "<"
         }
 
     } else {
@@ -21,7 +22,8 @@ function tourner() {
         face.classList.remove("apparait")
         face.classList.add("disparait")
         face.onanimationend = function (e) {
-            face.style.zIndex = 1 ;
+            face.style.zIndex = 1 ;            bt_tourner.innerText = "<"
+            bt_tourner.innerText = ">"
         }
     }
 

@@ -12,6 +12,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
 
 #tourner {
@@ -74,7 +75,7 @@
 #back {
     background: rgba(255, 255, 255, 0.5);
     border: #005900 solid 5px;
-    z-index: 2;
+    z-index: 2;overflow: hidden;
     /*transform: rotateY(90deg);*/
 }
 #back *{

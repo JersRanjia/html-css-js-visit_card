@@ -72,7 +72,7 @@
 /*-----------Back-----------*/
 
 #back {
-    background: white;
+    background: rgba(255, 255, 255, 0.5);
     border: #005900 solid 5px;
     z-index: 2;
     /*transform: rotateY(90deg);*/
@@ -99,32 +99,65 @@
 
 }
 
-/*-----------animation-----------*/
+/*-----------animation face-----------*/
 
 @keyframes disparitionFace {
 
-    from {
+    /*from {
         transform: rotate3d(0, 1, 0, 0deg);
         z-index: 3;
     }
     to {
         transform: rotate3d(0, 1, 0, 90deg);
+    }*/
+    0% {
+        filter: blur(0px);
+        opacity: 100%;     
+    }
+    100% {
+        filter: blur(10px);
+        opacity: 50%; 
     }
 }
 
-.disparait {
+.disparait-face {
     animation-name: disparitionFace;
     animation-duration: 1s ;
 }
 
 @keyframes apparitionFace {
-    from {transform: rotate3d(0, 1, 0, 90deg);}
+    /*from {transform: rotate3d(0, 1, 0, 90deg);}
     to {
         transform: rotate3d(0, 1, 0, 0deg);
+    }*/
+    0% {
+        filter: blur(10px); 
+        opacity: 50%;             
+    }
+    100% {
+        filter: blur(0px);
+        opacity: 100%;     
     }
 }
 
-.apparait {
+.apparait-face {
     animation-name: apparitionFace;
+    animation-duration: 1s ;
+}
+
+/*-----------animation face-----------*/
+@keyframes disparitionBack {
+
+    0% {
+        opacity: 100%;     
+    }
+    100% {
+        opacity: 0%; 
+    }
+    
+}
+    
+.disparait-back {
+    animation-name: disparitionFace;
     animation-duration: 1s ;
 }
